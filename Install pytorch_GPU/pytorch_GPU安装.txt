@@ -1,0 +1,39 @@
+<Step1>
+nvidia-smi
+** CUDA Version: 12.6
+安装版本小于12.6 即可
+nvcc -V
+
+<Step2>
+cuDNN 加速器
+C:\Program Files\NVlDlA GPU Computing Toolkit\CUDA\v12.5
+
+<Step3> conda create -n pytorch_GPU python==3.11
+
+conda activate pytorch_GPU
+
+** pip 安装pytorch  (12.5 → 12.1 版本)
+https://pytorch.org/
+pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
+
+
+出现的三个问题：
+① CUDA 安装完成后安装包消失 https://blog.csdn.net/weixin_46653651/article/details/140527247?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522f7edde540b5d182a5c4c5a851ace06c6%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&request_id=f7edde540b5d182a5c4c5a851ace06c6&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v1~rank_v31_ecpm-1-140527247-null-null.142^v102^control&utm_term=CUDA%20%E5%AE%89%E8%A3%85%E8%B7%AF%E5%BE%84%E6%B6%88%E5%A4%B1&spm=1018.2226.3001.4187
+② cuDNN复制路径在哪里 https://blog.csdn.net/qq_56079620/article/details/139363718?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522bb7b524f1a7e2e51cd7ac6725a35d9bf%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&request_id=bb7b524f1a7e2e51cd7ac6725a35d9bf&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~top_click~default-1-139363718-null-null.142^v102^control&utm_term=cuda12.5%E5%AF%B9%E5%BA%94%E7%9A%84pytorch%E7%89%88%E6%9C%AC&spm=1018.2226.3001.4187
+③ pytorch 对应版本
+
+<Step3> 验证  ture 
+
+安装教程：
+https://blog.csdn.net/Little_Carter/article/details/135934842?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522f082df2bcb3c9c853d018ad7299c821b%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&request_id=f082df2bcb3c9c853d018ad7299c821b&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~top_positive~default-1-135934842-null-null.142^v102^control&utm_term=pytorch%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8Bgpu&spm=1018.2226.3001.4187
+
+
+-----------------------------
+** if need ipykernel 
+conda install ipykernel
+
+
+
+pip install h5py
+pip install matplotlib
+pip install scikit-learn
